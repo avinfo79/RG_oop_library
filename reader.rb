@@ -10,7 +10,7 @@ class Reader
   end  
 
   def to_s
-  	"#{@name} \n #{@email} \n #{@city} \n #{@street} \n #{@house}"
+    "#{@name} \n #{@email} \n #{@city} \n #{@street} \n #{@house}"
   end
 
   def ==(other)
