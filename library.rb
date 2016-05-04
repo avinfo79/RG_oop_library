@@ -1,4 +1,3 @@
-#require_relative 'items.rb'
 require_relative 'store.rb'
 require_relative 'reader.rb'
 require_relative 'book.rb'
