@@ -1,3 +1,3 @@
 OOP_Library 
 
-RUN test_library.rb
+RUN ruby test_library.rb

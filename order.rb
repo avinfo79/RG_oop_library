@@ -6,7 +6,7 @@ class Order
   end
 
   def to_s
-  	"#{@book} \n #{@reader} \n #{date}"
+    "#{@book} \n #{@reader} \n #{date}"
   end
 
 end
