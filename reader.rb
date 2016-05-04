@@ -5,10 +5,6 @@ class Reader
      @name, @email, @city, @street, @house =  name, email, city, street, house
   end
   
-  def to_hash
-  	{@email =>[@name, @city, @street, @house]}
-  end  
-
   def to_s
     "#{@name} \n #{@email} \n #{@city} \n #{@street} \n #{@house}"
   end
