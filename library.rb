@@ -5,21 +5,26 @@ require_relative 'order.rb'
 require_relative 'author.rb'
 
 class Library
-	include Store
+  include Store
   
   attr_accessor :books, :authors, :readers, :orders
 
-	@@store=Storage.new
+  @@store=Storage.new
 
   def initialize
-    {:@books => :books, :@authors => :authors, :@readers => :readers, :@orders => :orders}.each do |k,v| 
-        instore=@@store.get_key(v)
-        instore.nil? ? self.instance_variable_set(k, []) : self.instance_variable_set(k, @@store.get_key(v)) 
+    @sections={:@books => :books, :@authors => :authors, :@readers => :readers, :@orders => :orders}
+    load
+  end
+
+  def load
+    @sections.each do |k,v| 
+      instore=@@store.get_key(v)
+      instore.nil? ? self.instance_variable_set(k, []) : self.instance_variable_set(k, @@store.get_key(v)) 
     end
   end
   
   def save
-    {:@books => :books, :@authors => :authors, :@readers => :readers, :@orders => :orders}.each do |k,v| 
+    @sections.each do |k,v| 
       @@store.save_key(v, self.instance_variable_get(k))
     end
   end
