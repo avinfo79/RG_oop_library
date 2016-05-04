@@ -1,0 +1,92 @@
+---
+:books:
+- !ruby/object:Book
+  title: Idiot
+  author: F.Dostoevskiy
+- !ruby/object:Book
+  title: Karamazov Bro.
+  author: F.Dostoevskiy
+- !ruby/object:Book
+  title: War and World
+  author: L.N. Tolstoy
+- !ruby/object:Book
+  title: Ana Karenina
+  author: L.N. Tolstoy
+:authors:
+- !ruby/object:Author
+  name: F.Dostoevskiy
+  bio: Fedor was born ....
+- !ruby/object:Author
+  name: L.N. Tolstoy
+  bio: Lev was born ....
+:readers:
+- !ruby/object:Reader
+  email: some1@mail
+  name: Alex
+  city: Dnepr
+  street: Central
+  house: '1'
+- !ruby/object:Reader
+  email: some2@mail
+  name: Dasha
+  city: Dnepr
+  street: Central
+  house: '2'
+- !ruby/object:Reader
+  email: some3@mail
+  name: Masha
+  city: Dnepr
+  street: Central
+  house: '3'
+:orders:
+- !ruby/object:Order
+  book: !ruby/object:Book
+    title: Idiot
+    author: F.Dostoevskiy
+  reader: &2 !ruby/object:Reader
+    email: some1@mail
+    name: Alex
+    city: Dnepr
+    street: Central
+    house: '1'
+  date: '2016-05-04T08:37:37+03:00'
+- !ruby/object:Order
+  book: !ruby/object:Book
+    title: Karamazov Bro.
+    author: F.Dostoevskiy
+  reader: &3 !ruby/object:Reader
+    email: some2@mail
+    name: Dasha
+    city: Dnepr
+    street: Central
+    house: '2'
+  date: '2016-05-04T08:37:37+03:00'
+- !ruby/object:Order
+  book: &1 !ruby/object:Book
+    title: War and World
+    author: L.N. Tolstoy
+  reader: &4 !ruby/object:Reader
+    email: some3@mail
+    name: Masha
+    city: Dnepr
+    street: Central
+    house: '3'
+  date: '2016-05-04T08:37:37+03:00'
+- !ruby/object:Order
+  book: *1
+  reader: *2
+  date: '2016-05-04T08:37:37+03:00'
+- !ruby/object:Order
+  book: *1
+  reader: *2
+  date: '2016-05-04T08:37:37+03:00'
+- !ruby/object:Order
+  book: *1
+  reader: *3
+  date: '2016-05-04T08:37:37+03:00'
+- !ruby/object:Order
+  book: !ruby/object:Book
+    title: Ana Karenina
+    author: L.N. Tolstoy
+  reader: *4
+  date: '2016-05-04T08:37:37+03:00'
