@@ -6,7 +6,7 @@ class Author
   end
 
   def to_s
-  	 "#{@name} \n #{@bio}"
+    "#{@name} \n #{@bio}"
   end
 
   def ==(other)

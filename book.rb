@@ -1,14 +1,12 @@
-require_relative 'author.rb'
-
 class Book 
   attr_accessor :title, :author
  
   def initialize(title, author)
-    	@title, @author=title, author.name 
+    @title, @author=title, author.name 
   end
 
   def to_s
-  	 "#{@title} \n #{@author}"
+    "#{@title} \n #{@author}"
   end
 
   def ==(other)

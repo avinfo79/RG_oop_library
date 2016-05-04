@@ -2,15 +2,11 @@ class Reader
   attr_accessor :name, :email, :city, :street, :house
  
   def initialize(name, email,  city, street, house)
-    @email, @name,  @city, @street, @house = email, name, city, street, house
+     @name, @email, @city, @street, @house =  name, email, city, street, house
   end
   
-  def to_hash
-  	{@email =>[@name, @city, @street, @house]}
-  end  
-
   def to_s
-  	 "#{@email} \n #{@name} \n #{@city} \n #{@street} \n #{@house}"
+    "#{@name} \n #{@email} \n #{@city} \n #{@street} \n #{@house}"
   end
 
   def ==(other)
