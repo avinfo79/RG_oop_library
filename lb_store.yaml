@@ -1,0 +1,363 @@
+---
+:books:
+- !ruby/object:Book
+  title: Idiot
+  author: F.Dostoevskiy
+- !ruby/object:Book
+  title: Karamazov Bro.
+  author: F.Dostoevskiy
+- !ruby/object:Book
+  title: War and World
+  author: L.N. Tolstoy
+- !ruby/object:Book
+  title: Ana Karenina
+  author: L.N. Tolstoy
+:authors:
+- !ruby/object:Author
+  name: F.Dostoevskiy
+  bio: Fedor was born ....
+- !ruby/object:Author
+  name: L.N. Tolstoy
+  bio: Lev was born ....
+:readers:
+- !ruby/object:Reader
+  name: Alex
+  email: some1@mail
+  city: Dnepr
+  street: Central
+  house: '1'
+- !ruby/object:Reader
+  name: Dasha
+  email: some2@mail
+  city: Dnepr
+  street: Central
+  house: '2'
+- !ruby/object:Reader
+  name: Masha
+  email: some3@mail
+  city: Dnepr
+  street: Central
+  house: '3'
+- !ruby/object:Reader
+  name: Pit
+  email: some4@mail
+  city: Dnepr
+  street: Central
+  house: '4'
+:orders:
+- !ruby/object:Order
+  book: !ruby/object:Book
+    title: Idiot
+    author: F.Dostoevskiy
+  reader: &2 !ruby/object:Reader
+    name: Alex
+    email: some1@mail
+    city: Dnepr
+    street: Central
+    house: '1'
+  date: '2016-05-05T20:22:11+03:00'
+- !ruby/object:Order
+  book: !ruby/object:Book
+    title: Karamazov Bro.
+    author: F.Dostoevskiy
+  reader: &3 !ruby/object:Reader
+    name: Dasha
+    email: some2@mail
+    city: Dnepr
+    street: Central
+    house: '2'
+  date: '2016-05-05T20:22:11+03:00'
+- !ruby/object:Order
+  book: &1 !ruby/object:Book
+    title: War and World
+    author: L.N. Tolstoy
+  reader: &4 !ruby/object:Reader
+    name: Masha
+    email: some3@mail
+    city: Dnepr
+    street: Central
+    house: '3'
+  date: '2016-05-05T20:22:11+03:00'
+- !ruby/object:Order
+  book: *1
+  reader: *2
+  date: '2016-05-05T20:22:11+03:00'
+- !ruby/object:Order
+  book: *1
+  reader: *2
+  date: '2016-05-05T20:22:11+03:00'
+- !ruby/object:Order
+  book: *1
+  reader: *3
+  date: '2016-05-05T20:22:11+03:00'
+- !ruby/object:Order
+  book: !ruby/object:Book
+    title: Ana Karenina
+    author: L.N. Tolstoy
+  reader: *4
+  date: '2016-05-05T20:22:11+03:00'
+- !ruby/object:Order
+  book: !ruby/object:Book
+    title: Idiot
+    author: F.Dostoevskiy
+  reader: &6 !ruby/object:Reader
+    name: Alex
+    email: some1@mail
+    city: Dnepr
+    street: Central
+    house: '1'
+  date: '2016-05-05T20:22:13+03:00'
+- !ruby/object:Order
+  book: !ruby/object:Book
+    title: Karamazov Bro.
+    author: F.Dostoevskiy
+  reader: &7 !ruby/object:Reader
+    name: Dasha
+    email: some2@mail
+    city: Dnepr
+    street: Central
+    house: '2'
+  date: '2016-05-05T20:22:13+03:00'
+- !ruby/object:Order
+  book: &5 !ruby/object:Book
+    title: War and World
+    author: L.N. Tolstoy
+  reader: &8 !ruby/object:Reader
+    name: Masha
+    email: some3@mail
+    city: Dnepr
+    street: Central
+    house: '3'
+  date: '2016-05-05T20:22:13+03:00'
+- !ruby/object:Order
+  book: *5
+  reader: *6
+  date: '2016-05-05T20:22:13+03:00'
+- !ruby/object:Order
+  book: *5
+  reader: *6
+  date: '2016-05-05T20:22:13+03:00'
+- !ruby/object:Order
+  book: *5
+  reader: *7
+  date: '2016-05-05T20:22:13+03:00'
+- !ruby/object:Order
+  book: !ruby/object:Book
+    title: Ana Karenina
+    author: L.N. Tolstoy
+  reader: *8
+  date: '2016-05-05T20:22:13+03:00'
+- !ruby/object:Order
+  book: !ruby/object:Book
+    title: Idiot
+    author: F.Dostoevskiy
+  reader: &10 !ruby/object:Reader
+    name: Alex
+    email: some1@mail
+    city: Dnepr
+    street: Central
+    house: '1'
+  date: '2016-05-05T20:25:08+03:00'
+- !ruby/object:Order
+  book: !ruby/object:Book
+    title: Karamazov Bro.
+    author: F.Dostoevskiy
+  reader: &11 !ruby/object:Reader
+    name: Dasha
+    email: some2@mail
+    city: Dnepr
+    street: Central
+    house: '2'
+  date: '2016-05-05T20:25:08+03:00'
+- !ruby/object:Order
+  book: &9 !ruby/object:Book
+    title: War and World
+    author: L.N. Tolstoy
+  reader: &12 !ruby/object:Reader
+    name: Masha
+    email: some3@mail
+    city: Dnepr
+    street: Central
+    house: '3'
+  date: '2016-05-05T20:25:08+03:00'
+- !ruby/object:Order
+  book: *9
+  reader: *10
+  date: '2016-05-05T20:25:08+03:00'
+- !ruby/object:Order
+  book: *9
+  reader: *10
+  date: '2016-05-05T20:25:08+03:00'
+- !ruby/object:Order
+  book: *9
+  reader: *11
+  date: '2016-05-05T20:25:08+03:00'
+- !ruby/object:Order
+  book: !ruby/object:Book
+    title: Ana Karenina
+    author: L.N. Tolstoy
+  reader: *12
+  date: '2016-05-05T20:25:08+03:00'
+- !ruby/object:Order
+  book: !ruby/object:Book
+    title: Idiot
+    author: F.Dostoevskiy
+  reader: &14 !ruby/object:Reader
+    name: Alex
+    email: some1@mail
+    city: Dnepr
+    street: Central
+    house: '1'
+  date: '2016-05-05T20:25:35+03:00'
+- !ruby/object:Order
+  book: !ruby/object:Book
+    title: Karamazov Bro.
+    author: F.Dostoevskiy
+  reader: &15 !ruby/object:Reader
+    name: Dasha
+    email: some2@mail
+    city: Dnepr
+    street: Central
+    house: '2'
+  date: '2016-05-05T20:25:35+03:00'
+- !ruby/object:Order
+  book: &13 !ruby/object:Book
+    title: War and World
+    author: L.N. Tolstoy
+  reader: &16 !ruby/object:Reader
+    name: Masha
+    email: some3@mail
+    city: Dnepr
+    street: Central
+    house: '3'
+  date: '2016-05-05T20:25:35+03:00'
+- !ruby/object:Order
+  book: *13
+  reader: *14
+  date: '2016-05-05T20:25:35+03:00'
+- !ruby/object:Order
+  book: *13
+  reader: *14
+  date: '2016-05-05T20:25:35+03:00'
+- !ruby/object:Order
+  book: *13
+  reader: *15
+  date: '2016-05-05T20:25:35+03:00'
+- !ruby/object:Order
+  book: !ruby/object:Book
+    title: Ana Karenina
+    author: L.N. Tolstoy
+  reader: *16
+  date: '2016-05-05T20:25:35+03:00'
+- !ruby/object:Order
+  book: !ruby/object:Book
+    title: Idiot
+    author: F.Dostoevskiy
+  reader: &18 !ruby/object:Reader
+    name: Alex
+    email: some1@mail
+    city: Dnepr
+    street: Central
+    house: '1'
+  date: '2016-05-05T20:27:40+03:00'
+- !ruby/object:Order
+  book: !ruby/object:Book
+    title: Karamazov Bro.
+    author: F.Dostoevskiy
+  reader: &19 !ruby/object:Reader
+    name: Dasha
+    email: some2@mail
+    city: Dnepr
+    street: Central
+    house: '2'
+  date: '2016-05-05T20:27:40+03:00'
+- !ruby/object:Order
+  book: &17 !ruby/object:Book
+    title: War and World
+    author: L.N. Tolstoy
+  reader: &20 !ruby/object:Reader
+    name: Masha
+    email: some3@mail
+    city: Dnepr
+    street: Central
+    house: '3'
+  date: '2016-05-05T20:27:40+03:00'
+- !ruby/object:Order
+  book: *17
+  reader: !ruby/object:Reader
+    name: Pit
+    email: some4@mail
+    city: Dnepr
+    street: Central
+    house: '4'
+  date: '2016-05-05T20:27:40+03:00'
+- !ruby/object:Order
+  book: *17
+  reader: *18
+  date: '2016-05-05T20:27:40+03:00'
+- !ruby/object:Order
+  book: *17
+  reader: *19
+  date: '2016-05-05T20:27:40+03:00'
+- !ruby/object:Order
+  book: !ruby/object:Book
+    title: Ana Karenina
+    author: L.N. Tolstoy
+  reader: *20
+  date: '2016-05-05T20:27:40+03:00'
+- !ruby/object:Order
+  book: !ruby/object:Book
+    title: Idiot
+    author: F.Dostoevskiy
+  reader: &22 !ruby/object:Reader
+    name: Alex
+    email: some1@mail
+    city: Dnepr
+    street: Central
+    house: '1'
+  date: '2016-05-05T20:27:47+03:00'
+- !ruby/object:Order
+  book: !ruby/object:Book
+    title: Karamazov Bro.
+    author: F.Dostoevskiy
+  reader: &23 !ruby/object:Reader
+    name: Dasha
+    email: some2@mail
+    city: Dnepr
+    street: Central
+    house: '2'
+  date: '2016-05-05T20:27:47+03:00'
+- !ruby/object:Order
+  book: &21 !ruby/object:Book
+    title: War and World
+    author: L.N. Tolstoy
+  reader: &24 !ruby/object:Reader
+    name: Masha
+    email: some3@mail
+    city: Dnepr
+    street: Central
+    house: '3'
+  date: '2016-05-05T20:27:47+03:00'
+- !ruby/object:Order
+  book: *21
+  reader: !ruby/object:Reader
+    name: Pit
+    email: some4@mail
+    city: Dnepr
+    street: Central
+    house: '4'
+  date: '2016-05-05T20:27:47+03:00'
+- !ruby/object:Order
+  book: *21
+  reader: *22
+  date: '2016-05-05T20:27:47+03:00'
+- !ruby/object:Order
+  book: *21
+  reader: *23
+  date: '2016-05-05T20:27:47+03:00'
+- !ruby/object:Order
+  book: !ruby/object:Book
+    title: Ana Karenina
+    author: L.N. Tolstoy
+  reader: *24
+  date: '2016-05-05T20:27:47+03:00'
