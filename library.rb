@@ -9,33 +9,33 @@ class Library
   
   attr_accessor :books, :authors, :readers, :orders
 
-  @@store=Storage.new
-
-  def initialize
+  def initialize(librrary_storage)
+    @store=Storage.new(librrary_storage)
+    #Можно конечно и без хеша реализовать, только в рельсах часто так передают параметры, зачем еще лишние такты:)
     @sections={:@books => :books, :@authors => :authors, :@readers => :readers, :@orders => :orders}
     load
   end
 
   def load
-    @sections.each do |k,v| 
-      instore=@@store.get_key(v)
-      instore.nil? ? self.instance_variable_set(k, []) : self.instance_variable_set(k, @@store.get_key(v)) 
+      @sections.each do |k,v| 
+      instore=@store.get_key(v)
+      instore.nil? ? self.instance_variable_set(k, []) : self.instance_variable_set(k, instore) 
     end
   end
   
   def save
-    @sections.each do |k,v| 
-      @@store.save_key(v, self.instance_variable_get(k))
+      @sections.each do |k,v| 
+      @store.save_key(v, self.instance_variable_get(k))
     end
   end
 
   def add(section, obj)
-    unless section.include? obj then 
-      section<<obj 
-      return obj
-    else 
+    if section.include? obj then 
       puts "Allredy in librrary" 
       return nil
+    else 
+      section<<obj 
+      return obj      
     end
   end
 
