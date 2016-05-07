@@ -11,7 +11,7 @@ class Library
 
   def initialize(librrary_storage)
     @store=Storage.new(librrary_storage)
-    @sections={:@books => :books, :@authors => :authors, :@readers => :readers, :@orders => :orders}
+    @sections={'@books': :books, '@authors': :authors, '@readers': :readers, '@orders': :orders}
     load
   end
 

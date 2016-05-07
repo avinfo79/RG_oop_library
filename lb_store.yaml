@@ -641,3 +641,59 @@
     author: L.N. Tolstoy
   reader: *44
   date: '2016-05-07T11:27:04+03:00'
+- !ruby/object:Order
+  book: !ruby/object:Book
+    title: Idiot
+    author: F.Dostoevskiy
+  reader: &46 !ruby/object:Reader
+    name: Alex
+    email: some1@mail
+    city: Dnepr
+    street: Central
+    house: '1'
+  date: '2016-05-07T11:32:06+03:00'
+- !ruby/object:Order
+  book: !ruby/object:Book
+    title: Karamazov Bro.
+    author: F.Dostoevskiy
+  reader: &47 !ruby/object:Reader
+    name: Dasha
+    email: some2@mail
+    city: Dnepr
+    street: Central
+    house: '2'
+  date: '2016-05-07T11:32:06+03:00'
+- !ruby/object:Order
+  book: &45 !ruby/object:Book
+    title: War and World
+    author: L.N. Tolstoy
+  reader: &48 !ruby/object:Reader
+    name: Masha
+    email: some3@mail
+    city: Dnepr
+    street: Central
+    house: '3'
+  date: '2016-05-07T11:32:06+03:00'
+- !ruby/object:Order
+  book: *45
+  reader: !ruby/object:Reader
+    name: Pit
+    email: some4@mail
+    city: Dnepr
+    street: Central
+    house: '4'
+  date: '2016-05-07T11:32:06+03:00'
+- !ruby/object:Order
+  book: *45
+  reader: *46
+  date: '2016-05-07T11:32:06+03:00'
+- !ruby/object:Order
+  book: *45
+  reader: *47
+  date: '2016-05-07T11:32:06+03:00'
+- !ruby/object:Order
+  book: !ruby/object:Book
+    title: Ana Karenina
+    author: L.N. Tolstoy
+  reader: *48
+  date: '2016-05-07T11:32:06+03:00'
