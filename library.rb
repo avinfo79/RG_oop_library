@@ -38,15 +38,15 @@ class Library
   end
   
   def who_offen_takes_book
-    puts "Offen takes book: #{self.max_group_by(:reader,1)[0][0] }"
+    puts "Offen takes book: #{max_group_by(:reader,1)[0][0] }"
   end
 
   def most_popular_book
-    puts "Most popular book: #{self.max_group_by(:book,1)[0][0] } "
+    puts "Most popular book: #{max_group_by(:book,1)[0][0]} "
   end
 
   def one_of_three
-    puts "Three most popular book readers count: #{self.cnt_reader_three_most_popular} "
+    puts "Three most popular book readers count: #{cnt_reader_three_most_popular} "
   end
 
   def cnt_reader_three_most_popular
