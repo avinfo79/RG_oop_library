@@ -11,8 +11,7 @@ class Library
 
   def initialize(librrary_storage)
     @store=Storage.new(librrary_storage)
-    #Можно конечно и без хеша реализовать, только в рельсах часто так передают параметры, зачем еще лишние такты:)
-    @sections={:@books => :books, :@authors => :authors, :@readers => :readers, :@orders => :orders}
+    @sections={:@books: :books, :@authors: :authors, :@readers: :readers, :@orders: :orders}
     load
   end
 
@@ -22,7 +21,7 @@ class Library
       instore.nil? ? self.instance_variable_set(k, []) : self.instance_variable_set(k, instore) 
     end
   end
-  
+
   def save
       @sections.each do |k,v| 
       @store.save_key(v, self.instance_variable_get(k))
@@ -30,15 +29,14 @@ class Library
   end
 
   def add(section, obj)
-    if section.include? obj then 
+    if section.include? obj 
       puts "Allredy in librrary" 
-      return nil
     else 
       section<<obj 
       return obj      
     end
   end
-
+  
   def who_offen_takes_book
     puts "Offen takes book: #{self.max_group_by(:reader,1)[0][0] }"
   end
@@ -51,12 +49,14 @@ class Library
     puts "Three most popular book readers count: #{self.cnt_reader_three_most_popular} "
   end
 
+  def cnt_reader_three_most_popular
+    max_group_by(:book, 3).map {|k,v| v[0].reader }.uniq.count
+  end
+
+private
+
   def max_group_by(condition, limit)
     @orders.group_by(&condition).max_by(limit) { |k,v| v.length }
   end
 
-  def cnt_reader_three_most_popular
-    max_group_by(:book, 3).map {|k,v| v[0].reader }.uniq.count
-  end
-  
 end

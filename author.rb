@@ -2,7 +2,7 @@ class Author
   attr_accessor :name, :bio
  
   def initialize(name, bio)
-    @name, @bio= name, bio
+    @name, @bio = name, bio
   end
 
   def to_s
